@@ -1,24 +1,18 @@
 ---
 layout: base.njk
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="generator" content="{{ eleventy.generator }}">
-    <title>Just a title</title>
-    <link rel="stylesheet" href="/styles.css">
-  </head>
-  <body class="mx-auto w-2/3 prose" >
-    <h1 class="text-3xl font-bold mb-3">My Blog</h1>
-    {% for post in collections.posts %}
-      <a href="{{ post.url }}">
-        <div class="flex flex-row gap-2 mb-3">
-          {% myImage post.data.image, "w-32 h-32 object-cover", "post.data.altText" %}
-          <h2 class="underline">{{ post.data.title }}</h2>
-        </div></a>
-    {% endfor %}
-  </body>
-</html>
+<h1 class="text-3xl font-bold mb-3">My Blog</h1>
+{% for post in collections.posts %}
+  <a href="{{ post.url }}">
+    <div class="flex flex-row gap-2 mb-3">
+      {%
+        myImage post.data.image, {
+          css: "w-32 h-32 object-cover",
+          alt: "what ever you want this to be",
+          widths: [300, 600],
+          sizes: "(max-width: 600px) 100vw, 600px"
+        }
+      %}
+      <h2 class="underline">{{ post.data.title }}</h2>
+    </div></a>
+{% endfor %}

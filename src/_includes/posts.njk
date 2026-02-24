@@ -11,7 +11,14 @@
   <body class="mx-auto w-2/3 prose">
     <p class="my-2 underline"><a href="/">home</a></p>
     <h1>{{ title }}</h1>
-    {% myImage image, "w-full h-64 object-cover", "post.data.altText" %}
+    {%
+      myImage image, {
+        css: "w-full h-64 object-cover",
+        alt: "what ever you want this to be",
+        widths: [300, 600],
+        sizes: "(max-width: 600px) 100vw, 600px"
+      }
+    %}
     {{ content | safe }}
   </body>
 </html>

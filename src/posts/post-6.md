@@ -1,6 +1,6 @@
 ---
 title: Modern Version Control with Git
-image: src/img/image-6.jpg
+image: /img/image-6.jpg
 layout: posts.njk
 ---
 

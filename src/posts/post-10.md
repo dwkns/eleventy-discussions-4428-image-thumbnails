@@ -1,6 +1,6 @@
 ---
 title: The Future of Web Development
-image: src/img/image-10.jpg
+image: /img/image-10.jpg
 layout: posts.njk
 ---
 

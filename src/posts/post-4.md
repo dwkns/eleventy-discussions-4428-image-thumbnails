@@ -1,6 +1,6 @@
 ---
 title: CSS Grid Layout Deep Dive
-image: src/img/image-4.jpg
+image: /img/image-4.jpg
 layout: posts.njk
 ---
 
