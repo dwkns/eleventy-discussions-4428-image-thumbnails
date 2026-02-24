@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="generator" content="{{ eleventy.generator }}">
+    <title>Just a title</title>
+    <link rel="stylesheet" href="/styles.css">
+  </head>
+  <body class="mx-auto w-2/3 prose">
+    <p class="my-2 underline"><a href="/">home</a></p>
+    <h1>{{ title }}</h1>
+    {% myImage image, "w-full h-64 object-cover", "post.data.altText" %}
+    {{ content | safe }}
+  </body>
+</html>
