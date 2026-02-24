@@ -1,6 +1,6 @@
 ---
 title: Understanding REST APIs and RESTful Design
-image: /img/image-8.jpg
+image: src/img/image-8.jpg
 layout: posts.njk
 ---
 

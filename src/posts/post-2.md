@@ -1,6 +1,6 @@
 ---
 title: The Art of Responsive Design
-image: /img/image-2.jpg
+image: src/img/image-2.jpg
 layout: posts.njk
 ---
 In our mobile-first world, responsive design is no longer optional—it's essential. Creating websites that adapt seamlessly to any screen size is a fundamental skill for modern developers.

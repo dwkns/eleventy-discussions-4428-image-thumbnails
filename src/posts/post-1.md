@@ -1,6 +1,6 @@
 ---
 title: Getting Started with Web Development
-image: /img/image-1.jpg
+image: src/img/image-1.jpg
 layout: posts.njk
 ---
 Web development is an exciting field that combines creativity with technical problem-solving. Whether you're interested in frontend, backend, or full-stack development, there's a path for everyone.

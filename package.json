@@ -5,11 +5,12 @@
   "license": "MIT",
   "dependencies": {
     "@11ty/eleventy": "^3.1.2",
+    "@11ty/eleventy-img": "^6.0.4",
     "eleventy-plugin-tailwindcss-4": "^3.0.0"
   },
   "type": "module",
   "scripts": {
-    "dev": "eleventy --serve"
+    "dev": "rm -rf dist && eleventy --serve"
   },
   "author": "dwkns",
   "devDependencies": {

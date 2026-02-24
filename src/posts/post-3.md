@@ -1,6 +1,6 @@
 ---
 title: JavaScript Fundamentals Every Developer Should Know
-image: /img/image-3.jpg
+image: src/img/image-3.jpg
 layout: posts.njk
 ---
 JavaScript has become the language of the web, powering everything from browser interactions to server-side applications. Understanding its core concepts is crucial for any developer.

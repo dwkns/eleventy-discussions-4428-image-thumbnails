@@ -1,6 +1,6 @@
 ---
 title: Performance Optimization Techniques for Web Apps
-image: /img/image-7.jpg
+image: src/img/image-7.jpg
 layout: posts.njk
 ---
 

@@ -1,6 +1,6 @@
 ---
 title: Building Accessible Web Applications
-image: /img/image-5.jpg
+image: src/img/image-5.jpg
 layout: posts.njk
 ---
 

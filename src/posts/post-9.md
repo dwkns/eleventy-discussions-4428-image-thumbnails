@@ -1,6 +1,6 @@
 ---
 title: Testing Strategies for Robust Applications
-image: /img/image-9.jpg
+image: src/img/image-9.jpg
 layout: posts.njk
 ---
 
