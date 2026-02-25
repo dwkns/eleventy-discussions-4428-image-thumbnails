@@ -9,8 +9,7 @@ layout: base.njk
         myImage post.data.image, {
           css: "w-32 h-32 object-cover",
           alt: "what ever you want this to be",
-          widths: [300, 600],
-          sizes: "(max-width: 600px) 100vw, 600px"
+          srcDir: "./src"
         }
       %}
       <h2 class="underline">{{ post.data.title }}</h2>

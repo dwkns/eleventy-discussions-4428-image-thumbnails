@@ -15,17 +15,23 @@ export default (eleventyConfig) => {
 
 	eleventyConfig.addShortcode("myImage", async function (src, options = {}) {
 
-		let { css, alt, widths = [300, 600], sizes = "" } = options;
-		let fullSrc = `./src/${src}`;
+		let {
+			css,
+			alt,
+			widths = [300, 600], // can set sensible defaults 
+			sizes = "(max-width: 600px) 100vw, 600px", 
+			srcDir = "./src" 
+		} = options;
 
+		let sourceImagePath = `${srcDir}${src}`;
 
-		let metadata = await Image(fullSrc, {
+		let metadata = await Image(sourceImagePath, {
 			widths: widths,
 			formats: ["jpeg", "png"],
 			outputDir: "dist/img/",
 		});
 
-	
+
 
 		let data = metadata.jpeg[metadata.jpeg.length - 1];
 
