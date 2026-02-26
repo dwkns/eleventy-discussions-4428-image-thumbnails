@@ -12,7 +12,6 @@ export default (eleventyConfig) => {
 		return collection.getFilteredByGlob("src/posts/*.md").reverse();
 	});
 
-
 	eleventyConfig.addShortcode("myImage", async function (src, options = {}) {
 
 		let {
@@ -20,7 +19,8 @@ export default (eleventyConfig) => {
 			alt,
 			widths = [300, 600], // can set sensible defaults 
 			sizes = "(max-width: 600px) 100vw, 600px", 
-			srcDir = "./src" 
+			srcDir = "./src",
+			outputDir = this.page.url
 		} = options;
 
 		let sourceImagePath = `${srcDir}${src}`;
@@ -28,24 +28,14 @@ export default (eleventyConfig) => {
 		let metadata = await Image(sourceImagePath, {
 			widths: widths,
 			formats: ["jpeg", "png"],
-			outputDir: "dist/img/",
+			outputDir: `dist${outputDir}`,
+			urlPath: ``
 		});
-
-
 
 		let data = metadata.jpeg[metadata.jpeg.length - 1];
 
-		return `<img src="${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async" class="${css}">`;
+		return `<img src="${outputDir}${data.url}" width="${data.width}" height="${data.height}" alt="${alt}" loading="lazy" decoding="async" class="${css}">`;
 	});
-
-
-
-
-
-
-
-
-	// eleventyConfig.addPassthroughCopy("src/img");
 
 }
 
