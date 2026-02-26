@@ -22,14 +22,14 @@ export default (eleventyConfig) => {
 			srcDir = "./src",
 			outputDir = this.page.url
 		} = options;
-
+		console.log("page: ", alt)
 		let sourceImagePath = `${srcDir}${src}`;
 
 		let metadata = await Image(sourceImagePath, {
 			widths: widths,
 			formats: ["jpeg", "png"],
 			outputDir: `dist${outputDir}`,
-			urlPath: ``
+			urlPath: ""
 		});
 
 		let data = metadata.jpeg[metadata.jpeg.length - 1];

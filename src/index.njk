@@ -8,7 +8,7 @@ layout: base.njk
       {%
         myImage post.data.image, {
           css: "w-32 h-32 object-cover",
-          alt: "what ever you want this to be",
+          alt: post.data.title,
           srcDir: "./src",
           outputDir: post.url
         }
